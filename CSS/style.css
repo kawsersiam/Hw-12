@@ -1,0 +1,107 @@
+/*todo COMMON CSS START*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primaryFont: "Poppins", sans-serif;
+  --secondaryFont: "PT Sans", sans-serif;
+  --primaryColor: #fc0;
+  --secondaryColor: #353535;
+}
+
+ul,ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,ul,p,span,ol{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: var(--primaryFont);
+}
+
+/*todo COMMON CSS ENDS */
+
+/* ! NAVBAR STARTS */
+nav{
+  background: #fff;
+  padding: 16px !important;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+ 
+}
+
+@media (min-width: 992px) {
+  nav {
+   box-shadow:none;
+}
+}
+
+
+@media  (max-width: 991px){
+   #customNav ul li a {
+   text-align: right;
+}
+}
+
+#customNav ul li a {
+  color: var(--secondaryColor);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 200%;
+  padding: 17px 23px 6px;
+  display: block;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#customNav ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--secondaryColor);
+  position: absolute;
+  top: 2;
+  right: 0;
+  transition: 0.5s;
+}
+
+#customNav ul li:hover a::after {
+  width: 100%;
+}
+
+#customNav ul li a::before {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  #customNav ul li:hover a::before {
+    width: 100%;
+  }
+
+#customNav ul li:hover a{
+    color: var(--primaryColor);
+}
+
+nav .navbar-toggler {
+  border: none;
+}
+nav .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ! NAVBAR ENDS */
